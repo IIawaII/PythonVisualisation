@@ -6,13 +6,24 @@
 [![CSDN](https://img.shields.io/badge/CSDN-技术博客-red.svg)](https://blog.csdn.net/woyych)
 
 <p align="center">
-  <img src="Header.jpg" alt="PythonVisualisation Banner" width="100%">
+  <img src="figure/Header.jpg" alt="PythonVisualisation Banner" width="100%">
 </p>
 
 ## 📌 项目简介
 
 这是一个专注于 **Python 数据可视化** 的开源项目，汇集了 30 种常见及创意图表的实现方式，涵盖电商、业务分析等典型场景。所有示例均基于模拟数据，可直接用于学习、教学或项目参考。
 
+---
+
+## 🔍可视化效果图预览
+
+<p align="center">
+  <img src="figure/Preview1.jpg" alt="PythonVisualisation Banner" width="100%">
+</p>
+
+<p align="center">
+  <img src="figure/Preview2.jpg" alt="PythonVisualisation Banner" width="100%">
+</p>
 ---
 
 ## 🗂️ 项目结构
@@ -50,6 +61,8 @@ PythonVisualisation/
 │   ├── 28、复合柱形图/
 │   ├── 29、滑珠图/
 │   └── 30、对比滑珠图/
+├── 交互面板/              # 基于Dash的交互式可视化看板
+│   └── dashboard_app.py
 └── 数据生成/
     └── fake.py            # 模拟电商数据生成脚本
 ```
@@ -126,12 +139,13 @@ python 数据生成/fake.py
 
 项目采用多种主流 Python 可视化库实现不同风格图表：
 
-- **Matplotlib**：基础绘图  
-- **Seaborn**：统计图表美化  
-- **Plotly**：交互式可视化  
+- **Matplotlib**：基础绘图
+- **Seaborn**：统计图表美化
+- **Plotly**：交互式可视化
 - **Pyecharts**：ECharts 风格高级图表
+- **Dash**：交互式Web应用框架（用于交互面板）
 
-> 建议在 Jupyter Notebook 环境中运行，以获得最佳交互体验。
+> 建议在 Jupyter Notebook 环境中运行单图表，使用交互面板进行综合数据分析。
 
 ## ▶️ 快速开始
 
@@ -144,7 +158,7 @@ cd PythonVisualisation
 ### 2. 安装依赖
 
 ```bash
-pip install pandas faker matplotlib seaborn plotly pyecharts jupyter
+pip install -r requirements.txt
 ```
 
 ### 3. 启动 Jupyter Notebook
@@ -156,6 +170,14 @@ jupyter notebook
 ### 4. 打开可视化示例
 
 在 Jupyter Notebook 中打开 `可视化` 文件夹，即可查看和运行各个可视化示例。
+
+### 5. 启动交互式看板
+
+```bash
+python dashboard_app.py
+```
+
+然后在浏览器中访问 `http://127.0.0.1:8050` 查看交互式看板。
 
 ---
 
